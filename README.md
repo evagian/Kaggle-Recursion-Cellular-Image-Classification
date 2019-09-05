@@ -1,6 +1,6 @@
 
 ```diff
-# ResNet50 accuracy not converging. I am open to suggestions for solving this problem.
+- # ResNet50 accuracy not converging. I am open to suggestions for solving this problem.
 ```
 
 # Kaggle-Recursion-Cellular-Image-Classification
@@ -35,5 +35,5 @@ Transfer learning: Initialize network weights using ResNet50 trained weights and
 Train ResNet50
 
 ```diff
-# ResNet50 accuracy not converging. I am open to suggestions for solving this problem.
+- # ResNet50 accuracy not converging. I am open to suggestions for solving this problem.
 ```
