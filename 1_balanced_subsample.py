@@ -36,11 +36,10 @@ def balanced_subsample(x,y,subsample_size=1.0):
 
     return xs,ys
 
-data = pd.read_csv("/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/train.csv")
+data = pd.read_csv("../input/train.csv")
 # Preview the first 5 lines of the loaded data
 print(data.head())
 print(data.shape)
-
 
 # train
 xstrain,ystrain = balanced_subsample(data.drop('sirna', axis=1),data['sirna'],subsample_size=1/3)
@@ -53,10 +52,9 @@ balanced_sample_train = balanced_sample_train.dropna()
 balanced_sample_train = balanced_sample_train.astype({"plate": int, "sirna": int})
 
 
-balanced_sample_train.to_csv('/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/balanced_sample_train.csv', index=False)
+balanced_sample_train.to_csv('../input/balanced_sample_train.csv', index=False)
 
 # test
-
 common = data.merge(balanced_sample_train,on=['id_code','sirna'])
 print(common)
 test_data = data[(~data.id_code.isin(common.id_code))&(~data.sirna.isin(common.sirna))]
@@ -73,6 +71,6 @@ print(balanced_sample_test.shape)
 balanced_sample_test = balanced_sample_test.dropna()
 balanced_sample_test = balanced_sample_test.astype({"plate": int, "sirna": int})
 
-balanced_sample_test.to_csv('/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/balanced_sample_test.csv', index=False)
+balanced_sample_test.to_csv('../input/balanced_sample_test.csv', index=False)
 
 
