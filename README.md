@@ -1,3 +1,6 @@
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `# ResNet50 accuracy Not Converging! I am open to suggestions for solving this problem.
+
 # Kaggle-Recursion-Cellular-Image-Classification
 Run python files with the given order:
 
@@ -29,4 +32,5 @@ Transfer learning: Initialize network weights using ResNet50 trained weights and
 ### 4_train_resnet50.ipynb
 Train ResNet50
 
-# Accuracy Not Converging! I am open to suggestions for solving this problem.
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `# ResNet50 accuracy Not Converging! I am open to suggestions for solving this problem.
+
