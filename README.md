@@ -2,13 +2,13 @@
 Run python files with the given order:
 
 ## 1_balanced_subsample.py
-splits train and test set using balanced subsamples containing images from all 1108 classes
+Splits train and test set using balanced subsamples containing images from all 1108 classes
 
 ## 2a_unzip_images_train.py
-reads the names of the train balanced subsample and unzips train images into the '../input/train/' folder
+Reads the names of the train balanced subsample and unzips train images into the '../input/train/' folder
 
 ## 2b_unzip_images_test.py
-reads the names of the test balanced subsample and unzips test images into the '../input/test/' folder
+Reads the names of the test balanced subsample and unzips test images into the '../input/test/' folder
 
 # Data structure 
 
@@ -22,3 +22,11 @@ The following 2 files organize input images using the data structure shown above
 # 3a_preprocessing_train.py
 
 # 3b_preprocessing_test.py
+
+# Train ResNet50 
+Transfer learning: Initialize network weights using ResNet50 trained weights and train model on Kaggle's ["Recursion Cellular Image Classification"](https://www.kaggle.com/c/recursion-cellular-image-classification/overview) dataset
+
+# 4_train_resnet50.ipynb
+Train ResNet50
+
+# Accuracy Not Converging! I am open to suggestions for solving this problem.
