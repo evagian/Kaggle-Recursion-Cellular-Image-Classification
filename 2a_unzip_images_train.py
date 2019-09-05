@@ -1,7 +1,7 @@
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import os
-print(os.listdir("/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input"))
+print(os.listdir("../input"))
 import sys
 import matplotlib.pyplot as plt
 sys.path.append('rxrx1-utils')
@@ -22,15 +22,15 @@ import pandas as pd
 # Read data from file 'filename.csv'
 # (in the same directory that your python process is based)
 # Control delimiters, rows, column names with read_csv (see later)
-data = pd.read_csv("/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/balanced_sample_train.csv")
+data = pd.read_csv("../input/balanced_sample_train.csv")
 # Preview the first 5 lines of the loaded data
 print(data.head())
 print(data.shape)
 #(36515, 5)
 #(512, 512, 3)
 
-my_zip =  zipfile.ZipFile('/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/train.zip') # Specify your zip file's name here
-storage_path = '/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/train'
+my_zip =  zipfile.ZipFile('../input/train.zip') # Specify your zip file's name here
+storage_path = '../input/train'
 #
 # y = rio.load_site_as_rgb('train', 'HEPG2-01', 1, 'C11', 1, (1, 2, 3, 4, 5, 6), storage_path)
 # print(y.shape)
