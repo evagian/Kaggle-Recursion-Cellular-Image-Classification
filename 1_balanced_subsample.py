@@ -1,6 +1,8 @@
+
+# split train and test set using balanced subsamples containing images from all 1108 classes
+
 import pandas as pd
 import numpy as np
-
 
 def balanced_subsample(x,y,subsample_size=1.0):
 
