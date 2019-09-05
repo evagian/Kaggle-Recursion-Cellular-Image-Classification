@@ -1,7 +1,7 @@
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import os
-print(os.listdir("/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input"))
+print(os.listdir("../input"))
 import sys
 import matplotlib.pyplot as plt
 sys.path.append('rxrx1-utils')
@@ -14,7 +14,7 @@ import zipfile
 # Load the Pandas libraries with alias 'pd'
 import pandas as pd
 # Read data from file 'filename.csv'
-data = pd.read_csv("/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/balanced_sample_test.csv")
+data = pd.read_csv("../input/balanced_sample_test.csv")
 # Preview the first 5 lines of the loaded data
 print(data.head())
 #
@@ -23,13 +23,13 @@ print(data.head())
 # #
 # # well_type = 'positive_control'
 #
-# filename = "/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/train.csv"
+# filename = "../input/train.csv"
 # data = pd.read_csv(filename)
 
 # data = data[data['well_type'] == well_type]
 print((data.shape))
 
-storage_path = '/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/test'
+storage_path = '../input/test'
 
 
 def convert_to_rgb(df, split, resize=False, new_size=224, extension='png'):
@@ -74,16 +74,16 @@ def convert_to_rgb(df, split, resize=False, new_size=224, extension='png'):
 
         for site in [1, 2]:
 
-            folder = '/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/'+str(split)+'/'+str(sirna)+'/'
+            folder = '../input/'+str(split)+'/'+str(sirna)+'/'
 
             if not os.path.exists(folder):
                 os.makedirs(folder)
 
-            save_path = '/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/'+str(split)+'/'+str(sirna)+'/'+str(code)+'_s'+str(site)+'.'+str(extension)
+            save_path = '../input/'+str(split)+'/'+str(sirna)+'/'+str(code)+'_s'+str(site)+'.'+str(extension)
 
             im = rio.load_site_as_rgb(
                 split, experiment, plate, well, site, channels=(1, 2, 3, 4, 5, 6),
-                base_path='/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/', rgb_map=RGB_MAP
+                base_path='../input/', rgb_map=RGB_MAP
             )
             im = im.astype(np.uint8)
             im = Image.fromarray(im)
@@ -119,7 +119,7 @@ convert_to_rgb(data, 'test')
 zip_and_remove('test')
 
 new_test = build_new_df(data)
-new_test.to_csv('/media/evagian/Elements/Kaggle/recursion-cellular-image-classification/input/balanced_sample_new_test.csv', index=False)
+new_test.to_csv('../input/balanced_sample_new_test.csv', index=False)
 
 
 
