@@ -30,6 +30,3 @@ Transfer learning: Initialize network weights using ResNet50 trained weights and
 ### 4_train_resnet50.ipynb
 Train ResNet50
 
-```diff
-- # ResNet50 accuracy not converging. I am open to suggestions for solving this problem.
-```
