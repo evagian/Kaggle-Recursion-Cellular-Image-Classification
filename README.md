@@ -1,8 +1,4 @@
 
-```diff
-- # ResNet50 accuracy not converging. I am open to suggestions for solving this problem.
-```
-
 # Kaggle-Recursion-Cellular-Image-Classification
 Run python files with the given order:
 
